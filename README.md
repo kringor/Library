@@ -397,6 +397,8 @@ This API is built with PHP (Slim Framework) and uses JWT for authentication and 
 }
 ```
 
+---
+
 ### Error Response when Token already used
 
 **Failure Response:**  
@@ -416,8 +418,12 @@ This API is built with PHP (Slim Framework) and uses JWT for authentication and 
 2. Tokens are refreshed after each request to ensure secure interactions.
 3. Expired tokens are automatically removed from the database.
 
+---
+
 ### Project Information
 This project is developed as part of a midterm requirement for the ITPC 115(System Integration and Architecture) subject, showcasing the ability to build secure API endpoints and manage tokens effectively.
+
+---
 
 ### Contact Information
 If you need assistance or have any questions, feel free to reach out to me. Below are my contact details:
