@@ -55,7 +55,246 @@ This API is built with PHP (Slim Framework) and uses JWT for authentication and 
 
 ## API Endpoints
 
-### 1. Get Books by Author ID
+### 1. User Registration
+**Endpoint:** `/user/register`  
+**Method:** POST  
+
+**Request:**  
+```json
+{
+  "username": "john_doe",
+  "password": "securepassword"
+}
+```
+
+**Response:**  
+```json
+{
+  "status": "success",
+  "access_token": null,
+  "data": null
+}
+```
+
+---
+
+### 2. User Authentication
+**Endpoint:** `/user/authenticate`  
+**Method:** POST  
+
+**Request:**  
+```json
+{
+  "username": "john_doe",
+  "password": "securepassword"
+}
+```
+
+**Response:**  
+```json
+{
+  "status": "success",
+  "access_token": "jwt_token_here",
+  "data": null
+}
+```
+
+---
+
+### 3. Create Author
+**Endpoint:** `/authors/Create`  
+**Method:** POST  
+
+**Request:**  
+```json
+{
+  "name": "Author Name",
+  "token": "jwt_token_here"
+}
+```
+
+**Response:**  
+```json
+{
+  "status": "success",
+  "access_token": "new_jwt_token",
+  "data": null
+}
+```
+
+---
+
+### 4. Get All Authors
+**Endpoint:** `/authors/Get`  
+**Method:** GET  
+
+**Request:**  
+```json
+{
+  "token": "jwt_token_here"
+}
+```
+
+**Response:**  
+```json
+{
+  "status": "success",
+  "access_token": "new_jwt_token",
+  "data": [
+    {
+      "authorid": 1,
+      "name": "Author Name"
+    }
+  ]
+}
+```
+
+---
+
+### 5. Update Author
+**Endpoint:** `/authors/Update/{id}`  
+**Method:** PUT  
+
+**Request:**  
+```json
+{
+  "name": "Updated Author Name",
+  "token": "jwt_token_here"
+}
+```
+
+**Response:**  
+```json
+{
+  "status": "success",
+  "access_token": "new_jwt_token",
+  "data": null
+}
+```
+
+---
+
+### 6. Delete Author
+**Endpoint:** `/authors/Delete/{id}`  
+**Method:** DELETE  
+
+**Request:**  
+```json
+{
+  "token": "jwt_token_here"
+}
+```
+
+**Response:**  
+```json
+{
+  "status": "success",
+  "access_token": "new_jwt_token",
+  "data": null
+}
+```
+
+---
+
+### 7. Create Book
+**Endpoint:** `/books/Create`  
+**Method:** POST  
+
+**Request:**  
+```json
+{
+  "title": "Book Title",
+  "author_id": 1,
+  "token": "jwt_token_here"
+}
+```
+
+**Response:**  
+```json
+{
+  "status": "success",
+  "access_token": "new_jwt_token",
+  "data": null
+}
+```
+
+---
+
+### 8. Get All Books
+**Endpoint:** `/books/Get`  
+**Method:** GET  
+
+**Request:**  
+```json
+{
+  "token": "jwt_token_here"
+}
+```
+
+**Response:**  
+```json
+{
+  "status": "success",
+  "access_token": "new_jwt_token",
+  "data": [
+    {
+      "bookid": 1,
+      "title": "Book Title",
+      "authorid": 1
+    }
+  ]
+}
+```
+
+---
+
+### 9. Update Book
+**Endpoint:** `/books/Update/{id}`  
+**Method:** PUT  
+
+**Request:**  
+```json
+{
+  "title": "Updated Book Title",
+  "author_id": 2,
+  "token": "jwt_token_here"
+}
+```
+
+**Response:**  
+```json
+{
+  "status": "success",
+  "access_token": "new_jwt_token",
+  "data": null
+}
+```
+
+---
+
+### 10. Delete Book
+**Endpoint:** `/books/Delete/{id}`  
+**Method:** DELETE  
+
+**Request:**  
+```json
+{
+  "token": "jwt_token_here"
+}
+```
+
+**Response:**  
+```json
+{
+  "status": "success",
+  "access_token": "new_jwt_token",
+  "data": null
+}
+```
+
+---
+
+### 11. Get Books by Author ID
 
 **Endpoint**: `/books/GetByAuthorId`  
 **Method**: `POST`  
@@ -85,7 +324,7 @@ This API is built with PHP (Slim Framework) and uses JWT for authentication and 
 
 ---
 
-### 2. Create Book-Author Relation
+### 12. Create Book-Author Relation
 
 **Endpoint**: `/BooksAuthors`  
 **Method**: `POST`  
@@ -110,7 +349,7 @@ This API is built with PHP (Slim Framework) and uses JWT for authentication and 
 
 ---
 
-### 3. Get All Book-Author Relations
+### 13. Get All Book-Author Relations
 
 **Endpoint**: `/BooksAuthors/Get`  
 **Method**: `GET`  
@@ -139,7 +378,7 @@ This API is built with PHP (Slim Framework) and uses JWT for authentication and 
 
 ---
 
-### 4. Delete Book-Author Relation
+### 14. Delete Book-Author Relation
 
 **Endpoint**: `/BooksAuthors/Delete/{id}`  
 **Method**: `DELETE`  
@@ -167,3 +406,7 @@ This API is built with PHP (Slim Framework) and uses JWT for authentication and 
 1. All endpoints require a valid JWT token in the request body for authentication.
 2. Tokens are refreshed after each request to ensure secure interactions.
 3. Expired tokens are automatically removed from the database.
+
+```
+
+---
