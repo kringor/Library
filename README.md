@@ -46,10 +46,8 @@ This API is built with PHP (Slim Framework) and uses JWT for authentication and 
 
 4. Import the database schema (SQL file provided in the repository).
 
-5. Start the server:
-   ```bash
-   php -S localhost:8080 -t public
-   ```
+5. Start the Xampp server:
+
 
 ---
 
@@ -407,5 +405,15 @@ This API is built with PHP (Slim Framework) and uses JWT for authentication and 
 2. Tokens are refreshed after each request to ensure secure interactions.
 3. Expired tokens are automatically removed from the database.
 
+### Project Information
+This project is developed as part of a midterm requirement for the ITPC 115(System Integration and Architecture) subject, showcasing the ability to build secure API endpoints and manage tokens effectively.
+
+### Contact Information
+If you need assistance or have any questions, feel free to reach out to me. Below are my contact details:
+
+Name: Kenneth Denver Ringor
+University: Don Mariano Marcos Memorial State University (Mid-La Union Campus)
+Email: kringor20722@student.dmmmsu.edu.ph
+Phone: 09695878499
 
 
