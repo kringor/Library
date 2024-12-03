@@ -407,5 +407,5 @@ This API is built with PHP (Slim Framework) and uses JWT for authentication and 
 2. Tokens are refreshed after each request to ensure secure interactions.
 3. Expired tokens are automatically removed from the database.
 
-```
+
 
