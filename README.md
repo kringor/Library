@@ -397,6 +397,17 @@ This API is built with PHP (Slim Framework) and uses JWT for authentication and 
 }
 ```
 
+### Error Response when Token already used
+
+**Failure Response:**  
+```json
+{
+  "status": "fail",
+  "access_token": null,
+  "message": "Token already used"
+}
+```
+
 ---
 
 ### Notes
