@@ -409,4 +409,3 @@ This API is built with PHP (Slim Framework) and uses JWT for authentication and 
 
 ```
 
----
