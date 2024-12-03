@@ -411,9 +411,9 @@ This project is developed as part of a midterm requirement for the ITPC 115(Syst
 ### Contact Information
 If you need assistance or have any questions, feel free to reach out to me. Below are my contact details:
 
-Name: Kenneth Denver Ringor
-University: Don Mariano Marcos Memorial State University (Mid-La Union Campus)
-Email: kringor20722@student.dmmmsu.edu.ph
-Phone: 09695878499
+- Name: Kenneth Denver Ringor
+- University: Don Mariano Marcos Memorial State University (Mid-La Union Campus)
+- Email: kringor20722@student.dmmmsu.edu.ph
+- Phone: 09695878499
 
 
